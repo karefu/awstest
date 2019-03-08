@@ -145,6 +145,7 @@ def application(environ, start_response):
             logger.warning('Error retrieving request body for async work.')
         response = ''
     else:
+        logger.info("method not POST, respond welcome")
         response = welcome
     status = '200 OK'
     headers = [('Content-type', 'text/html')]
